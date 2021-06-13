@@ -12,7 +12,7 @@ const Timer = () => {
     const startTimer = () => {
         console.log('Starting timer.');
     }
-    const stopTimer = () => {
+const  stopTimer = () => {
         console.log('Stop timer.');
     }
     const resetTimer = () => {
