@@ -28,10 +28,17 @@ describe(
 describe('mounted Timer', () => {
     var container;
   
-    beforeEach(() => (container = mount(<Timer />)));
+    beforeEach(() => {
+      // const div = document.createElement('div');
+      // div.setAttribute('idd', 'container')
+      container = shallow(<Timer /> )
+      console.log("Container :: ", container.instance())
+      return container
+    });
   
     it('invokes startTimer when the start button is clicked', () => {
-      console.log("startTime : ", container.instance())
+      // let container = mount(<Timer />)
+      // console.log("startTime : ", container.instance())
       const spy = jest.spyOn(container.instance(), 'startTimer');
       container.instance().forceUpdate();
       expect(spy).toHaveBeenCalledTimes(0);
