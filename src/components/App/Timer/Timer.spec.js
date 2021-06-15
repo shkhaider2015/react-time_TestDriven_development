@@ -26,7 +26,7 @@ describe(
 
 
 describe('mounted Timer', () => {
-    var container;
+    let container;
   
     beforeEach(() => {
       // const div = document.createElement('div');
