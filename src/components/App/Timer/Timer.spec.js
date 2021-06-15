@@ -31,7 +31,7 @@ describe('mounted Timer', () => {
     beforeEach(() => {
       // const div = document.createElement('div');
       // div.setAttribute('idd', 'container')
-      container = shallow(<Timer /> )
+      container = mount(<Timer /> )
       console.log("Container :: ", container.instance())
       return container
     });
