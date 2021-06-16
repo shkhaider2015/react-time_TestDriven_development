@@ -14,6 +14,7 @@ describe(
         it(
             "should render a <div />",
             () => {
+              console.log("Timer : Container --> ", container)
                 expect(container.find("div").length).toBeGreaterThanOrEqual(1)
             }
         )
@@ -28,17 +29,12 @@ describe(
 describe('mounted Timer', () => {
     let container;
   
-    beforeEach(() => {
-      // const div = document.createElement('div');
-      // div.setAttribute('idd', 'container')
-      container = mount(<Timer /> )
-      console.log("Container :: ", container.instance())
-      return container
-    });
+    beforeEach(() => (container = mount(<Timer />) )
+    );
   
     it('invokes startTimer when the start button is clicked', () => {
       // let container = mount(<Timer />)
-      // console.log("startTime : ", container.instance())
+      console.log("startTime : ", container.prototype)
       const spy = jest.spyOn(container.instance(), 'startTimer');
       container.instance().forceUpdate();
       expect(spy).toHaveBeenCalledTimes(0);

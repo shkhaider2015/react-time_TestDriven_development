@@ -13,7 +13,7 @@ const Timer = () => {
         console.log('Starting timer.');
         setIsOn(true)
     }
-    const  stopTimer = () => {
+    const stopTimer = () => {
         console.log('Stop timer.');
         setIsOn(false)
     }
